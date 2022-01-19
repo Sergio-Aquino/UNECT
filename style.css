@@ -1,3 +1,8 @@
+body{
+    margin: auto;
+}
+
+
 .Logo{
   width: 46px;
   height: 80px;
@@ -51,4 +56,11 @@ header{
     position: relative;
     margin-left:350px;
     display: inline-block;
+}
+
+main{
+    border: 3px solid black;
+    height: 600px;
+    margin: auto;
+    position: relative;
 }
