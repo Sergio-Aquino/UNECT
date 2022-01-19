@@ -48,7 +48,7 @@ h1:after{
     position: absolute;
     right: 0px;
     top: 30%;
-    background: white;
+    background:white;
 }
 
 header{
@@ -59,8 +59,37 @@ header{
 }
 
 main{
-    border: 3px solid black;
+    border: 3px solid white;
     height: 600px;
     margin: auto;
     position: relative;
 }
+
+.barra_tarefa{
+    width: 449px; 
+    height:45px;
+    border-radius: 14px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    bottom:0;
+    right: 0;
+    top: -540px;
+    left:87px;
+    margin: auto;
+}
+
+.button2{
+  width: 40px;
+  height: 39.38px;
+  left: 1115px;
+  top:12px;
+  position: absolute;
+  background: white;
+  border: 1px solid white;
+}
+
+
+
