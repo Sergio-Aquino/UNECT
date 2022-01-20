@@ -1,5 +1,6 @@
 body{
     margin: auto;
+    max-width: 2000px;
 }
 
 
@@ -8,7 +9,7 @@ body{
   height: 80px;
   position: absolute;
   top: 10%;
-  left: 0px;;
+  left: 0px;
 }
 
 @font-face{
@@ -48,6 +49,7 @@ h1:after{
     right: 0px;
     top: 30%;
     background:white;
+    display: flex;
 }
 
 header{
