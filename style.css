@@ -58,7 +58,7 @@ header{
 }
 
 main{
-    border: 3px solid black;
+    border: 3px solid white;
     height: 600px;
     margin: auto;
     position: relative;
@@ -136,9 +136,15 @@ main{
     top: 0;
 }
 
-
+@font-face{
+    font-family: Roboto;
+    src: url('./Roboto-Regular.ttf');
+}
 
 h2{ 
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
     text-align: center;
     font-size: 36px;
     line-height: 42px;
@@ -149,7 +155,7 @@ h2{
     top: -20px;
 }
 
-h2::before{
+h2:before{
     content:'';
     width: 250px;
     height: 0px;
