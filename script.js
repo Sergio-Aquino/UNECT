@@ -1,10 +1,12 @@
 const elementoLista = document.querySelector('ul')
 const elementoInput = document.querySelector('input')
-const elementoBotao = document.querySelector('button2')
+const elementoBotao = document.querySelector('button')
 
 const tarefas = []
 
 function mostraTarefas(){
+
+    elementoLista.innerHTML = ''
 
     for(tarefa of tarefas){
         const elementoTarefa = document.createElement('li')
@@ -20,8 +22,9 @@ mostraTarefas()
 function addTarefa(){
     const textoTarefa = elementoInput.value
     tarefas.push(textoTarefa)
+    elementoInput.value = ''
 
-    mostraTarefas
+    mostraTarefas()
 }
 
 elementoBotao.setAttribute('onclick', 'addTarefa()')
