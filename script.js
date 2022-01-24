@@ -1,6 +1,6 @@
 const elementoLista = document.querySelector('ul')
 const elementoInput = document.querySelector('input')
-const elementoBotao = document.querySelector('button')
+const elementoBotao = document.getElementById('button2')
 
 const tarefas = []
 
