@@ -56,16 +56,34 @@ function removeTarefa(pos){
 
 function passarTarefa(pos2){
     doing.push(tarefas[pos2])//Passando a tarefa do array 'tarefa' para o array 'doing'
+    tarefas.splice(tarefas[pos2], 1)//Excluindo a tarefa em questão do array 'tarefas'
+    mostraTarefas()//Renderizando as informações.
+    fazendo()
+}
 
+
+function fazendo(){ 
     elementoLista2.innerHTML = '' //Limpando o 'ul2'
     for(item of doing){ //Percorrendo o vetor 'doing'
         const elementoTarefa = document.createElement('li')//Criando o 'li' da barra 'Doing'
         const textoTarefa = document.createTextNode(item)//Pegando o texto do item no array.
 
-        elementoTarefa.appendChild(textoTarefa)
-        elementoLista2.appendChild(elementoTarefa)
+        const elementoButton3 = document.createElement('button')
+        const btext3 = document.createTextNode('delete')
+        elementoButton3.appendChild(btext3)
 
-        tarefas.splice(tarefas[pos2], 1)
-        mostraTarefas()
+
+        elementoTarefa.appendChild(textoTarefa)//Inserindo a tarefa no 'li'
+        elementoLista2.appendChild(elementoTarefa)//Inserindo o 'li' na 'ul2'
+        elementoTarefa.appendChild(elementoButton3)
+
+        const pos3 = doing.indexOf(item)
+        elementoButton3.setAttribute('onclick', `apagarTarefa(${pos3})`)
+
     }
+}
+
+function apagarTarefa(pos3){
+    doing.splice(pos3, 1)
+    fazendo()
 }
