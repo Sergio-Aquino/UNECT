@@ -13,17 +13,17 @@ function mostraTarefas(){
         const elementoTarefa = document.createElement('li') // item a ser feito, em outras palavras, o meu 'li'.
         const textoTarefa = document.createTextNode(tarefa) // Texto do item a ser feito, texto este que está no meu array.
 
-        const elementoLink = document.createElement('a')//Criei um link.
+        const elementoButton = document.createElement('button')//Criei um link.
         const pos = tarefas.indexOf(tarefa)//Estou pegando a posição da tarefa em questão no array.
-        elementoLink.setAttribute('onclick', `removeTarefa(${pos})`)//Quando clicar em 'delete', excluo a tarefa.
+        elementoButton.setAttribute('onclick', `removeTarefa(${pos})`)//Quando clicar em 'delete', excluo a tarefa.
 
-        const linkText = document.createTextNode('delete')//Contéudo do meu link, ou seja, o que vai aparecer na tela.
-        elementoLink.appendChild(linkText)//Estou pegando o meu link e colocando nele o conteúdo que eu quero que apareça.
-        elementoLink.setAttribute('href', '#')//Não acontece nada com o meu link.
+        const bText = document.createTextNode('delete')//Contéudo do meu link, ou seja, o que vai aparecer na tela.
+        elementoButton.appendChild(bText)//Estou pegando o meu link e colocando nele o conteúdo que eu quero que apareça.
+        elementoButton.setAttribute('href', '#')//Não acontece nada com o meu link.
 
         elementoTarefa.appendChild(textoTarefa) // O meu 'li' vai receber um texto, e esse texto é o texto da tarefa que está dentro do meu array. 
         elementoLista.appendChild(elementoTarefa)// Peguei o meu 'ul' do 'To do' e acrescentei nele o 'li'.
-        elementoTarefa.appendChild(elementoLink)
+        elementoTarefa.appendChild(elementoButton)
     }
 }
 //--------------------------------------------------------------------------------------------------------------------------------
