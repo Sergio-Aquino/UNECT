@@ -4,6 +4,7 @@ const elementoBotao = document.getElementById('button2') // Selecionando o botã
 const elementoLista2 = document.getElementById('ul2')
 
 const tarefas = [] // array que armazena as tarefas.
+const doing = []
 //--------------------------------------------------------------------------------------------------------------------------------
 
 function mostraTarefas(){
@@ -25,8 +26,8 @@ function mostraTarefas(){
         const pos = tarefas.indexOf(tarefa)//Estou pegando a posição da tarefa em questão no array.
         elementoButton.setAttribute('onclick', `removeTarefa(${pos})`)//Quando clicar em 'delete', excluo a tarefa.
 
-        var item = textoTarefa
-        elementoButton2.setAttribute('onclick', `passarTarefa(${item})`)
+        const pos2 = tarefas.indexOf(tarefa)
+        elementoButton2.setAttribute('onclick', `passarTarefa(${pos2})`)
 
         //--------------------------------------------------------------------------------------------------------------------
         
@@ -53,14 +54,18 @@ function removeTarefa(pos){
 }
 //-----------------------------------------------------------------------------------------------------------------------
 
-function passarTarefa(item){
-    var textoTarefa2 = item
-    
-    const elementoTarefa2 = document.createElement('li')
-    elementoTarefa2.appendChild(textoTarefa)
-    elementoLista2.appendChild(elementoTarefa2)
+function passarTarefa(pos2){
+    doing.push(tarefas[pos2])//Passando a tarefa do array 'tarefa' para o array 'doing'
 
-    tarefas.splice(item, 1)
+    elementoLista2.innerHTML = '' //Limpando o 'ul2'
+    for(item of doing){ //Percorrendo o vetor 'doing'
+        const elementoTarefa = document.createElement('li')//Criando o 'li' da barra 'Doing'
+        const textoTarefa = document.createTextNode(item)//Pegando o texto do item no array.
 
-    mostraTarefas()
+        elementoTarefa.appendChild(textoTarefa)
+        elementoLista2.appendChild(elementoTarefa)
+
+        tarefas.splice(tarefas[pos2], 1)
+        mostraTarefas()
+    }
 }
