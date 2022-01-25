@@ -13,17 +13,24 @@ function mostraTarefas(){
         const elementoTarefa = document.createElement('li') // item a ser feito, em outras palavras, o meu 'li'.
         const textoTarefa = document.createTextNode(tarefa) // Texto do item a ser feito, texto este que está no meu array.
 
-        const elementoButton = document.createElement('button')//Criei um link.
+        const elementoButton = document.createElement('button')//Criei um button.
+        const bText = document.createTextNode('delete')//Contéudo do meu link, ou seja, o que vai aparecer na tela.
+        elementoButton.appendChild(bText)//Estou pegando o meu button e colocando nele o conteúdo que eu quero que apareça.
+
+        const elementoButton2 = document.createElement('button')
+        const bText2 = document.createTextNode('passar')
+        elementoButton2.appendChild(bText2)
+
         const pos = tarefas.indexOf(tarefa)//Estou pegando a posição da tarefa em questão no array.
         elementoButton.setAttribute('onclick', `removeTarefa(${pos})`)//Quando clicar em 'delete', excluo a tarefa.
 
-        const bText = document.createTextNode('delete')//Contéudo do meu link, ou seja, o que vai aparecer na tela.
-        elementoButton.appendChild(bText)//Estou pegando o meu link e colocando nele o conteúdo que eu quero que apareça.
-        elementoButton.setAttribute('href', '#')//Não acontece nada com o meu link.
+        //--------------------------------------------------------------------------------------------------------------------------
+        
 
-        elementoTarefa.appendChild(textoTarefa) // O meu 'li' vai receber um texto, e esse texto é o texto da tarefa que está dentro do meu array. 
+        elementoTarefa.appendChild(textoTarefa)//O meu 'li' vai receber um texto, e esse texto é o texto da tarefa que está dentro do meu array. 
         elementoLista.appendChild(elementoTarefa)// Peguei o meu 'ul' do 'To do' e acrescentei nele o 'li'.
         elementoTarefa.appendChild(elementoButton)
+        elementoTarefa.appendChild(elementoButton2)
     }
 }
 //--------------------------------------------------------------------------------------------------------------------------------
@@ -40,7 +47,5 @@ function removeTarefa(pos){
     tarefas.splice(pos, 1)//Exclui a tarefa da posição em questão.
     mostraTarefas()
 }
-
-
 
 //--------------------------------------------------------------------------------------------------------------------------------
