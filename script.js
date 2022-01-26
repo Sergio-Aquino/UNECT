@@ -32,8 +32,9 @@ function mostraTarefas(){
         
         elementoTarefa.appendChild(textoTarefa)//O meu 'li' vai receber um texto, e esse texto é o texto da tarefa que está dentro do meu array. 
         elementoLista.appendChild(elementoTarefa)// Peguei o meu 'ul' do 'To do' e acrescentei nele o 'li'.
-        elementoTarefa.appendChild(elementoButton)
         elementoTarefa.appendChild(elementoButton2)
+        elementoTarefa.appendChild(elementoButton)
+        
 
     }
 }
@@ -75,8 +76,9 @@ function fazendo(){
 
         elementoTarefa.appendChild(textoTarefa)//Inserindo a tarefa no 'li'
         elementoLista2.appendChild(elementoTarefa)//Inserindo o 'li' na 'ul2'
-        elementoTarefa.appendChild(elementoButton3)
         elementoTarefa.appendChild(elementoButton4)
+        elementoTarefa.appendChild(elementoButton3)
+        
 
         const pos3 = doing.indexOf(item)
         elementoButton3.setAttribute('onclick', `apagarTarefa(${pos3})`)
