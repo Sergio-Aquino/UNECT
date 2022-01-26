@@ -26,8 +26,6 @@ function mostraTarefas(){
 
         const pos = tarefas.indexOf(tarefa)//Estou pegando a posição da tarefa em questão no array tarefas.
         elementoButton.setAttribute('onclick', `removeTarefa(${pos})`)//Quando clicar em 'delete', excluo a tarefa.
-
-        const pos2 = tarefas.indexOf(tarefa)//Estou pegando a posição da tarefa em questão no array tarefas.
         elementoButton2.setAttribute('onclick', `passarTarefa(${pos})`)
         
         elementoTarefa.appendChild(textoTarefa)//O meu 'li' vai receber um texto, e esse texto é o texto da tarefa que está dentro do meu array. 
@@ -80,8 +78,6 @@ function fazendo(){
 
         const pos = doing.indexOf(item)//Pegando a posição do item em questão no array 'doing'.
         elementoButton3.setAttribute('onclick', `apagarTarefa(${pos})`)//Chamando a função apagarTarefa() com a posição do item como argumento.
-
-        const pos4 = doing.indexOf(item)//Pegando a posição do item em questão no array 'doing'.
         elementoButton4.setAttribute('onclick', `passarTarefa2(${pos})`)//Chamando a função passarTarefa2() com a posição do item em questão como argumento.
 
     }
@@ -121,8 +117,6 @@ function feito(){
 
         const pos = done.indexOf(task)//Pegando a posição do meu item em questão.
         elementoButton6.setAttribute('onclick', `removeTask(${pos})`)//Quando o botão 'delete' for clicado, chamar a função removeTask(), passando como argumento a posição da tarefa em questão para apagá-la.
-
-        const pos6 = done.indexOf(task)//Pegando a posição do meu elemento em questão.
         elementoButton5.setAttribute('onclick', `retornarTarefa(${pos})`)//Chamando a função 'retornarTarefa()', passando como argumento a posição da tarefa, para fazer com que a tarefa em questão volte para a aba 'Doing'.
     }
 }
