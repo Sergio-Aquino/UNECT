@@ -5,6 +5,7 @@ const elementoLista2 = document.getElementById('ul2')
 
 const tarefas = [] // array que armazena as tarefas.
 const doing = []
+const done = []
 //--------------------------------------------------------------------------------------------------------------------------------
 
 function mostraTarefas(){
@@ -55,8 +56,8 @@ function removeTarefa(pos){
 //-----------------------------------------------------------------------------------------------------------------------
 
 function passarTarefa(pos2){
-    doing.push(tarefas[pos2])//Passando a tarefa do array 'tarefa' para o array 'doing'
-    tarefas.splice(tarefas[pos2], 1)//Excluindo a tarefa em questão do array 'tarefas'
+    doing.push(tarefas[pos2])//Passando a tarefa do array 'tarefa' para o array 'doing'.
+    tarefas.splice(tarefas[pos2], 1)//Excluindo a tarefa em questão do array 'tarefas'.
     mostraTarefas()//Renderizando as informações.
     fazendo()
 }
@@ -71,14 +72,22 @@ function fazendo(){
         const elementoButton3 = document.createElement('button')
         const btext3 = document.createTextNode('delete')
         elementoButton3.appendChild(btext3)
+        
+        const elementoButton4 = document.createElement('button')
+        const btext4 = document.createTextNode('concluir')
+        elementoButton4.appendChild(btext4) 
 
 
         elementoTarefa.appendChild(textoTarefa)//Inserindo a tarefa no 'li'
         elementoLista2.appendChild(elementoTarefa)//Inserindo o 'li' na 'ul2'
         elementoTarefa.appendChild(elementoButton3)
+        elementoTarefa.appendChild(elementoButton4)
 
         const pos3 = doing.indexOf(item)
         elementoButton3.setAttribute('onclick', `apagarTarefa(${pos3})`)
+
+        const pos4 = doing.indexOf(item)
+        elementoButton4.setAttribute('onclick', `passarTarefa2(${pos4})`)
 
     }
 }
@@ -86,4 +95,15 @@ function fazendo(){
 function apagarTarefa(pos3){
     doing.splice(pos3, 1)
     fazendo()
+}
+
+function passarTarefa2(pos4){
+    done.push(doing[pos4])
+    doing.splice(doing[pos4], 1)
+    fazendo()
+    feito()
+}
+
+function feito(){
+    
 }
