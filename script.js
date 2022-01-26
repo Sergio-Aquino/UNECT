@@ -19,10 +19,12 @@ function mostraTarefas(){
         const elementoButton = document.createElement('button')//Criei um button.
         const bText = document.createTextNode('delete')//Contéudo do meu button, ou seja, o que vai aparecer na tela.
         elementoButton.appendChild(bText)//Estou pegando o meu button e colocando nele o conteúdo que eu quero que apareça.
+        elementoButton.classList.add('deletar')//Atribuindo uma classe a esse botão.
 
         const elementoButton2 = document.createElement('button')//Criei um button.
         const bText2 = document.createTextNode('passar')//Criei um texto que será colocado no button.
         elementoButton2.appendChild(bText2)//Colocando o texto no button.
+        elementoButton2.classList.add('passar')//Atribuindo uma classe a esse botão.
 
         const pos = tarefas.indexOf(tarefa)//Estou pegando a posição da tarefa em questão no array tarefas.
         elementoButton.setAttribute('onclick', `removeTarefa(${pos})`)//Quando clicar em 'delete', excluo a tarefa.
@@ -65,10 +67,12 @@ function fazendo(){
         const elementoButton3 = document.createElement('button')//Criando um button.
         const btext3 = document.createTextNode('delete')//Criando o texto que será colocado no buttton.
         elementoButton3.appendChild(btext3)//Colocando o texto no button.
+        elementoButton3.classList.add('deletar')//Adicionando uma classe a esse botão.
         
         const elementoButton4 = document.createElement('button')//Criando um button.
         const btext4 = document.createTextNode('concluir')//Criando texto que será colocado dentro do button.
         elementoButton4.appendChild(btext4) //Colocando o texto no button.
+        elementoButton4.classList.add('passar')//Adicionando uma classe a esse elemento.
 
         elementoTarefa.appendChild(textoTarefa)//Inserindo a tarefa no 'li'
         elementoLista2.appendChild(elementoTarefa)//Inserindo o 'li' na 'ul2'
@@ -105,10 +109,12 @@ function feito(){
         const elementoButton5 = document.createElement('button')//Criando um button.
         const btext5 = document.createTextNode('retornar')//Criando o texto que será adicionado no botão.
         elementoButton5.appendChild(btext5)//Colocando o texto no botão.
+        elementoButton5.classList.add('passar')//Adicionando uma classe a esse elemento.
 
         const elementoButton6 = document.createElement('button')//Criando um button.
         const btext6 = document.createTextNode('delete')//Criando o texto que será adicionado no meu button.
         elementoButton6.appendChild(btext6)//Colocando o texto dentro do meu button.
+        elementoButton6.classList.add('deletar')
 
         elementoTarefa.appendChild(textoTarefa)//Colocando o texto do item que está no meu array done dentro do meu 'li'.
         elementoLista3.appendChild(elementoTarefa)//Colocando o meu 'li' dentro do meu 'ul3'.

@@ -185,3 +185,54 @@ h2:before{
     right: 0px;
 }
 
+.passar{
+    position: absolute;
+    background-image: ;
+    right: 0px;
+    bottom: 0px;
+}
+
+.deletar{
+    position: absolute;
+    background: blue;
+    right: -65px;
+    bottom: 0px;
+}
+
+.Todo li, .Doing li{
+    position: relative;
+    list-style: none;
+    height: 25px;
+    width:172.96px; 
+    left: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.00em;
+    color: #000000;
+}
+
+li:before{
+    content: '';
+    width: 250px;
+    height: 0px;
+    border: 1px solid #D9D9D9;
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    left: -18px;
+    right: 0px;
+}
+
+.container{
+    position: absolute;
+    border: 1px solid black;
+    width: 298px;
+    height: 286px;
+    border-radius: 9px;
+    top: 60px;
+}
