@@ -28,7 +28,7 @@ function mostraTarefas(){
         elementoButton.setAttribute('onclick', `removeTarefa(${pos})`)//Quando clicar em 'delete', excluo a tarefa.
 
         const pos2 = tarefas.indexOf(tarefa)//Estou pegando a posição da tarefa em questão no array tarefas.
-        elementoButton2.setAttribute('onclick', `passarTarefa(${pos2})`)
+        elementoButton2.setAttribute('onclick', `passarTarefa(${pos})`)
         
         elementoTarefa.appendChild(textoTarefa)//O meu 'li' vai receber um texto, e esse texto é o texto da tarefa que está dentro do meu array. 
         elementoLista.appendChild(elementoTarefa)//Peguei o meu 'ul' do 'To do' e acrescentei nele o 'li'.
@@ -51,9 +51,9 @@ function removeTarefa(pos){
     mostraTarefas()//Chamei a função para renderizar as informações.
 }
 //-----------------------------------------------------------------------------------------------------------------------
-function passarTarefa(pos2){
-    doing.push(tarefas[pos2])//Passando a tarefa do array 'tarefa' para o array 'doing'.
-    tarefas.splice(tarefas[pos2], 1)//Excluindo a tarefa em questão do array 'tarefas'.
+function passarTarefa(pos){
+    doing.push(tarefas[pos])//Passando a tarefa do array 'tarefa' para o array 'doing'.
+    tarefas.splice(tarefas[pos], 1)//Excluindo a tarefa em questão do array 'tarefas'.
     mostraTarefas()//Renderizando as informações após ter apagado a tarefa do array 'tarefas'.
     fazendo()//Chamando outra função para mostrar a tarefa que acabou de entrar no array 'doing'.
 }
@@ -78,23 +78,23 @@ function fazendo(){
         elementoTarefa.appendChild(elementoButton3)//Inserindo o botão de deletar no 'li'.
         
 
-        const pos3 = doing.indexOf(item)//Pegando a posição do item em questão no array 'doing'.
-        elementoButton3.setAttribute('onclick', `apagarTarefa(${pos3})`)//Chamando a função apagarTarefa() com a posição do item como argumento.
+        const pos = doing.indexOf(item)//Pegando a posição do item em questão no array 'doing'.
+        elementoButton3.setAttribute('onclick', `apagarTarefa(${pos})`)//Chamando a função apagarTarefa() com a posição do item como argumento.
 
         const pos4 = doing.indexOf(item)//Pegando a posição do item em questão no array 'doing'.
-        elementoButton4.setAttribute('onclick', `passarTarefa2(${pos4})`)//Chamando a função passarTarefa2() com a posição do item em questão como argumento.
+        elementoButton4.setAttribute('onclick', `passarTarefa2(${pos})`)//Chamando a função passarTarefa2() com a posição do item em questão como argumento.
 
     }
 }
 //-----------------------------------------------------------------------------------------------------------------------
-function apagarTarefa(pos3){
-    doing.splice(pos3, 1)//Apagando a tarefa em questão do array 'doing'.
+function apagarTarefa(pos){
+    doing.splice(pos, 1)//Apagando a tarefa em questão do array 'doing'.
     fazendo()//Renderizando as informações após ter apagado a tarefa do array 'doing'.
 }
 //-----------------------------------------------------------------------------------------------------------------------
-function passarTarefa2(pos4){
-    done.push(doing[pos4])//Adicionando a tarefa em questão no array 'done'.
-    doing.splice(doing[pos4], 1)//Apagando a mesma tarefa, mas no array 'doing'.
+function passarTarefa2(pos){
+    done.push(doing[pos])//Adicionando a tarefa em questão no array 'done'.
+    doing.splice(doing[pos], 1)//Apagando a mesma tarefa, mas no array 'doing'.
     fazendo()//Renderizando as informações após ter apagado a tarefa do array 'doing'.
     feito()//Chamando a função feito() para mostrar a tarefa que acabou de entrar no array 'done'.
 }
@@ -119,22 +119,22 @@ function feito(){
         elementoTarefa.appendChild(elementoButton5)//Colocando o botão de 'retornar' dentro do meu 'li'.
         elementoTarefa.appendChild(elementoButton6)//Colocando o botão de 'delete' dentro do meu 'li'.
 
-        const pos5 = done.indexOf(task)//Pegando a posição do meu item em questão.
-        elementoButton6.setAttribute('onclick', `removeTask(${pos5})`)//Quando o botão 'delete' for clicado, chamar a função removeTask(), passando como argumento a posição da tarefa em questão para apagá-la.
+        const pos = done.indexOf(task)//Pegando a posição do meu item em questão.
+        elementoButton6.setAttribute('onclick', `removeTask(${pos})`)//Quando o botão 'delete' for clicado, chamar a função removeTask(), passando como argumento a posição da tarefa em questão para apagá-la.
 
         const pos6 = done.indexOf(task)//Pegando a posição do meu elemento em questão.
-        elementoButton5.setAttribute('onclick', `retornarTarefa(${pos6})`)//Chamando a função 'retornarTarefa()', passando como argumento a posição da tarefa, para fazer com que a tarefa em questão volte para a aba 'Doing'.
+        elementoButton5.setAttribute('onclick', `retornarTarefa(${pos})`)//Chamando a função 'retornarTarefa()', passando como argumento a posição da tarefa, para fazer com que a tarefa em questão volte para a aba 'Doing'.
     }
 }
 //-----------------------------------------------------------------------------------------------------------------------
-function removeTask(pos5){
-    done.splice(pos5, 1)//Apagando a tarefa em questão do array 'done'.
+function removeTask(pos){
+    done.splice(pos, 1)//Apagando a tarefa em questão do array 'done'.
     feito()//Renderizando as informações após ter apagado a tarefa.
 }
 //-----------------------------------------------------------------------------------------------------------------------
-function retornarTarefa(pos6){
-    tarefas.push(done[pos6])//Pegando a tarefa em questão e colocando-a dentro do meu array 'tarefas'.
-    done.splice(done[pos6], 1)//Apagando a tarefa do meu array 'done'.
+function retornarTarefa(pos){
+    tarefas.push(done[pos])//Pegando a tarefa em questão e colocando-a dentro do meu array 'tarefas'.
+    done.splice(done[pos], 1)//Apagando a tarefa do meu array 'done'.
     feito()//Renderizando as informações da aba 'Done' após ter apagado a tarefa do array 'done'.
     mostraTarefas()//Chamando a função mostraTarefas() para mostrar a tarefa que acabou de entrar novamente no array 'tarefas'.
 }
