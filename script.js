@@ -80,7 +80,7 @@ function fazendo(){
         const elementoButton4 = document.createElement('button')//Criando um button.
         const btext4 = document.createTextNode('')//Criando texto que será colocado dentro do button.
         elementoButton4.appendChild(btext4) //Colocando o texto no button.
-        elementoButton4.classList.add('concluir')//Adicionando uma classe a esse elemento.
+        elementoButton4.classList.add('passar')//Adicionando uma classe a esse elemento.
 
         const imageD = document.createElement('img')
         imageD.src = ('VectorDelete.png')
@@ -125,7 +125,7 @@ function feito(){
         const elementoButton5 = document.createElement('button')//Criando um button.
         const btext5 = document.createTextNode('')//Criando o texto que será adicionado no botão.
         elementoButton5.appendChild(btext5)//Colocando o texto no botão.
-        elementoButton5.classList.add('retornar')//Adicionando uma classe a esse elemento.
+        elementoButton5.classList.add('passar')//Adicionando uma classe a esse elemento.
 
         const elementoButton6 = document.createElement('button')//Criando um button.
         const btext6 = document.createTextNode('')//Criando o texto que será adicionado no meu button.
