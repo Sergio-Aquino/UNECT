@@ -205,9 +205,10 @@ h2:before{
     right: -33px;
     border: none;
     background: rgb(0, 201, 0.7);
-    border-radius: 50%;
-    width: 16px;
-    height: 16.3px;
+    width: 17px;
+    height: 17px;
+    border-radius: 20px;
+    bottom: 5px;
 }
 
 .deletar2{
@@ -221,10 +222,11 @@ h2:before{
     position: absolute;
     right: 50px;
     border: none;
-    border-radius: 50%;
     background: #141414;
     width: 17px;
-    height: 16.3px;
+    height: 17px;
+    border-radius: 20px;
+    bottom: 6px;
 }
 
 .deletar3{
