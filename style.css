@@ -65,10 +65,10 @@ header{
 }
 
 main{
-    position: absolute;
+    position: relative;
     width: 100%;
     border: 4px solid  white;
-    height: 350px;
+    height: 700px;
     bottom: 0;
 }
 
