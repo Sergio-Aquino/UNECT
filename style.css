@@ -65,10 +65,11 @@ header{
 }
 
 main{
-    position: relative;
+    position: absolute;
     width: 100%;
-    border: 4px solid white;
-    height: 700px;
+    border: 4px solid  white;
+    height: 350px;
+    bottom: 0;
 }
 
 .barra{
@@ -205,8 +206,8 @@ h2:before{
     border: none;
     background: rgb(0, 201, 0.7);
     border-radius: 50%;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16.3px;
 }
 
 .deletar2{
@@ -222,7 +223,8 @@ h2:before{
     border: none;
     border-radius: 50%;
     background: #141414;
-    width: 18px;
+    width: 17px;
+    height: 16.3px;
 }
 
 .deletar3{
@@ -289,11 +291,15 @@ li:before{
     right: 0px;
 }
 
-.container{
+/*.container{
     position: absolute;
     border: 1px solid black;
     width: 298px;
     height: 286px;
     border-radius: 9px;
     top: 60px;
+}*/
+
+ul{
+    width: 130px;
 }
