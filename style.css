@@ -290,3 +290,13 @@ li:before{
     left: -37px;
     right: 0;
 }
+
+ul{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;
+    max-height: 225px;
+    -webki-line-clamp: 9;
+    -webkit-box-orient: vertical;
+}
