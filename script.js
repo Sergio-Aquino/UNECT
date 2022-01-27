@@ -61,7 +61,7 @@ function removeTarefa(pos){
 //-----------------------------------------------------------------------------------------------------------------------
 function passarTarefa(pos){
     doing.push(tarefas[pos])//Passando a tarefa do array 'tarefa' para o array 'doing'.
-    tarefas.splice(tarefas[pos], 1)//Excluindo a tarefa em questão do array 'tarefas'.
+    tarefas.splice(pos, 1)//Excluindo a tarefa em questão do array 'tarefas'.
     mostraTarefas()//Renderizando as informações após ter apagado a tarefa do array 'tarefas'.
     fazendo()//Chamando outra função para mostrar a tarefa que acabou de entrar no array 'doing'.
 }
@@ -110,7 +110,7 @@ function apagarTarefa(pos){
 //-----------------------------------------------------------------------------------------------------------------------
 function passarTarefa2(pos){
     done.push(doing[pos])//Adicionando a tarefa em questão no array 'done'.
-    doing.splice(doing[pos], 1)//Apagando a mesma tarefa, mas no array 'doing'.
+    doing.splice(pos, 1)//Apagando a mesma tarefa, mas no array 'doing'.
     fazendo()//Renderizando as informações após ter apagado a tarefa do array 'doing'.
     feito()//Chamando a função feito() para mostrar a tarefa que acabou de entrar no array 'done'.
 }
@@ -158,7 +158,7 @@ function removeTask(pos){
 //-----------------------------------------------------------------------------------------------------------------------
 function retornarTarefa(pos){
     tarefas.push(done[pos])//Pegando a tarefa em questão e colocando-a dentro do meu array 'tarefas'.
-    done.splice(done[pos], 1)//Apagando a tarefa do meu array 'done'.
+    done.splice(pos, 1)//Apagando a tarefa do meu array 'done'.
     feito()//Renderizando as informações da aba 'Done' após ter apagado a tarefa do array 'done'.
     mostraTarefas()//Chamando a função mostraTarefas() para mostrar a tarefa que acabou de entrar novamente no array 'tarefas'.
 }
