@@ -187,17 +187,50 @@ h2:before{
 
 .passar{
     position: absolute;
-    right: 0px;
-    bottom: 0px;
+    right: -38px;
+    border: none;
+    background: white;
 }
 
 .deletar{
     position: absolute;
     right: -65px;
-    bottom: 0px;
+    border: none;
+    background: white;
 }
 
+.concluir{
+    position: absolute;
+    right: -33px;
+    border: none;
+    background: rgb(0, 201, 0.7);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+}
 
+.deletar2{
+   position: absolute;
+   right: -65px;
+   border: none;
+   background: white; 
+}
+
+.retornar{
+    position: absolute;
+    right: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #141414;
+    width: 18px;
+}
+
+.deletar3{
+   position: absolute;
+   right: 18px;
+   border: none;
+   background: white; 
+}
 
 .Todo li, .Doing li{
     position: relative;
@@ -236,7 +269,7 @@ li:before{
     content: '';
     width: 250px;
     height: 0px;
-    border: 1px solid #D9D9D9;
+    border: 0.5px solid #D9D9D9;
     position: absolute;
     margin: auto;
     bottom: 0;
@@ -249,10 +282,10 @@ li:before{
     content: '';
     width: 250px;
     height: 0px;
-    border: 1px solid #D9D9D9;
+    border: 0.5px solid #D9D9D9;
     margin: auto;
     bottom: 0;
-    left: -18px;
+    left: -35px;
     right: 0px;
 }
 
