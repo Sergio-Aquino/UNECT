@@ -55,6 +55,8 @@ h1:before{
     right: 20%;
     top: 30%;
     background:white;
+    cursor: pointer;
+
 }
 
 header{
@@ -101,6 +103,7 @@ main{
   border: 5px solid white;
   margin-left: 3px;
   width: 40px;
+  cursor: pointer;
 }
 
 #button2{
@@ -108,6 +111,7 @@ main{
   border: 1px solid white;
   width: 40px;
   height: 39.38;
+  cursor: pointer;
 }
 
 .Doing{
@@ -191,6 +195,7 @@ h2:before{
     right: -38px;
     border: none;
     background: white;
+    cursor: pointer;
 }
 
 .deletar{
@@ -198,6 +203,7 @@ h2:before{
     right: -65px;
     border: none;
     background: white;
+    cursor: pointer;
 }
 
 .concluir{
@@ -205,10 +211,12 @@ h2:before{
     right: -33px;
     border: none;
     background: rgb(0, 201, 0.7);
-    width: 17px;
-    height: 17px;
-    border-radius: 20px;
-    bottom: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    bottom: 6.27px;
+    padding: 2px;
+    cursor: pointer;
 }
 
 .deletar2{
@@ -216,6 +224,7 @@ h2:before{
    right: -65px;
    border: none;
    background: white; 
+   cursor: pointer;
 }
 
 .retornar{
@@ -223,10 +232,12 @@ h2:before{
     right: 50px;
     border: none;
     background: #141414;
-    width: 17px;
-    height: 17px;
-    border-radius: 20px;
-    bottom: 6px;
+    width: 14.2px;
+    height: 14.53px;
+    border-radius: 50%;
+    bottom: 6.27px;
+    padding: 0px;
+    cursor: pointer;
 }
 
 .deletar3{
@@ -234,6 +245,7 @@ h2:before{
    right: 18px;
    border: none;
    background: white; 
+   cursor: pointer;
 }
 
 .Todo li, .Doing li{
